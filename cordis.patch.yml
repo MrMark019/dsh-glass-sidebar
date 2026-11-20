@@ -1,0 +1,10 @@
+# dsh-glass-sidebar profile patch layer — one Host row.
+#
+# The row exists so the Loader has an enabled entry for this package: it carries
+# the durable preferences (Config), injects the pre-paint state row, and makes
+# dsh-client-modules publish the `./client` bundle. The preferences are written
+# back into this row's `config:` block by the platform's settings editor, the
+# same way `ui-theme` stores the theme and font sizes.
+- insert:
+    - id: glass-sidebar
+      name: 'dsh-glass-sidebar'

@@ -1,0 +1,68 @@
+{
+  "name": "dsh-glass-sidebar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frosted, translucent left sidebar for the DeepSeek Harness Web GUI, with blur and opacity controls in Settings",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./assets/*": "./lib/assets/*"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "lib/assets/*",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "glass",
+    "translucent",
+    "frosted",
+    "sidebar",
+    "theme"
+  ],
+  "author": "MrMark019",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMark019/dsh-glass-sidebar.git"
+  },
+  "homepage": "https://github.com/MrMark019/dsh-glass-sidebar#readme",
+  "bugs": {
+    "url": "https://github.com/MrMark019/dsh-glass-sidebar/issues"
+  },
+  "scripts": {
+    "test": "node --test test/client.test.mjs test/host.test.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.19.0"
+  }
+}
